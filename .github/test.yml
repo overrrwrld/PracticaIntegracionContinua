@@ -3,7 +3,7 @@ name: Prueba unitaria
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   deploy:
@@ -11,19 +11,19 @@ jobs:
 
     steps:
       
-name: Clona el repositorio
-      uses: actions/checkout@v3
+     - name: Clona el repositorio
+       uses: actions/checkout@v3
 
-      
-name: configura nodejs
-      uses: actions/setup-node@v3
-      with:
-          node-version: '20'
+            
+     - name: configura nodejs
+       uses: actions/setup-node@v3
+       with:
+            node-version: '20'
 
-      
-name: Instalar Dependencias
-      run: npm install
+            
+     - name: Instalar Dependencias
+       run: npm install
 
-      
-name: Ejecutar pruebas
-      run: npm test
+            
+     - name: Ejecutar pruebas
+       run: npm test
